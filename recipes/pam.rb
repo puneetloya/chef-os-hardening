@@ -93,6 +93,7 @@ when 'debian'
 
   execute 'update-pam' do
     command '/usr/sbin/pam-auth-update --package'
+    environment ({'DEBIAN_FRONTEND' => 'noninteractive'})
   end
 
   # do config for rhel-family
